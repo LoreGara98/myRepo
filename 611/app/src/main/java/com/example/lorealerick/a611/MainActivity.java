@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 
+import com.example.lorealerick.a611.Fragments.FragAggiungiBd;
 import com.example.lorealerick.a611.Fragments.FragHome;
 import com.example.lorealerick.a611.Interfaces.ListenerHome;
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements ListenerHome {
 
     private Fragment fragments [];
     private String titles [];
-    private final int nPages = 1;
+    private final int nPages = 2;
     private FragmentManager fragmentManager;
     private TextView toolbarTitle;
     private Toolbar toolbar;
@@ -71,11 +72,20 @@ public class MainActivity extends AppCompatActivity implements ListenerHome {
 
         fragments [0] = new FragHome();
         titles [0] = "Home";
+
+        fragments [1] = new FragAggiungiBd();
+        titles [1] = "Aggiungi nuovo";
     }
 
     @Override
     public void bdPressed(String nome) {
 
         //Toast.makeText(this,nome,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void addBdPressed() {
+
+        replaceFragment(1,true);
     }
 }

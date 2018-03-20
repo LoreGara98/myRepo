@@ -57,6 +57,7 @@ public class FragHome extends Fragment implements SearchView.OnQueryTextListener
             public void onClick(View view) {
 
                 Snackbar.make(view,"Ciao stronxo",Snackbar.LENGTH_SHORT).show();
+                listenerHome.addBdPressed();
             }
         });
 

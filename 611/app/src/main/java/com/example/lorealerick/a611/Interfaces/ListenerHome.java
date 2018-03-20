@@ -7,4 +7,6 @@ package com.example.lorealerick.a611.Interfaces;
 public interface ListenerHome {
 
     void bdPressed (String nome);
+
+    void addBdPressed ();
 }
